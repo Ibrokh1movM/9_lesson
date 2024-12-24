@@ -18,7 +18,7 @@ class DatabaseConnect:
                 password=self.password,
                 port=self.port
             )
-            self.connection.set_client_encoding('UTF8')  # Setting encoding to UTF8
+            self.connection.set_client_encoding('UTF8')
             return self.connection
         except psycopg2.DatabaseError as e:
             print(f"Database connection error: {e}")
